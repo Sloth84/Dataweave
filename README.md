@@ -47,5 +47,6 @@ try
 	catch (FileNotFoundException ex) 
 	{ 
 		Console.WriteLine($"File error: {ex.Message}"); 
-	}	
+	}
+}
 ```
