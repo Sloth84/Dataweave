@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dataweave", "Dataweave.csproj", "{96E6CD13-CC3E-4EA2-9F7D-8716DDDADDCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCLI", "..\TestCLI\TestCLI.csproj", "{047D2845-0255-42A8-AF71-91BE57F07FA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96E6CD13-CC3E-4EA2-9F7D-8716DDDADDCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96E6CD13-CC3E-4EA2-9F7D-8716DDDADDCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96E6CD13-CC3E-4EA2-9F7D-8716DDDADDCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96E6CD13-CC3E-4EA2-9F7D-8716DDDADDCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{047D2845-0255-42A8-AF71-91BE57F07FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047D2845-0255-42A8-AF71-91BE57F07FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047D2845-0255-42A8-AF71-91BE57F07FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047D2845-0255-42A8-AF71-91BE57F07FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F2BB97D8-E5C3-4729-AA93-43F54DCDDAE1}
+	EndGlobalSection
+EndGlobal
