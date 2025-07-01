@@ -40,5 +40,12 @@ var metadata = ffprobe.Metadata;
 ### Handling Errors
 ```
 using Dataweave;
-try { var ffprobe = new FFprobe("nonexistent.mp4"); var metadata = ffprobe.Metadata; } catch (FileNotFoundException ex) { Console.WriteLine($"File error: {ex.Message}"); }	
+try 
+{ 
+	var ffprobe = new FFprobe("nonexistent.mp4"); 
+	var metadata = ffprobe.Metadata; } 
+	catch (FileNotFoundException ex) 
+	{ 
+		Console.WriteLine($"File error: {ex.Message}"); 
+	}	
 ```
