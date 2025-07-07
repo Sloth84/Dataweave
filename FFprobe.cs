@@ -46,10 +46,19 @@ namespace Dataweave
             }
         }
 
+        /// <summary>
+        /// If set to true, the output will be in units of 1/1000 of a second.
+        /// </summary>
         internal bool? Unit { get; set; } = false;
 
+        /// <summary>
+        /// If set to true, the output will be in sexagesimal format (HH:MM:SS.milliseconds).
+        /// </summary>
         internal bool? Sexagesimal { get; set; } = false;
 
+        /// <summary>
+        /// If set to true, the output will be bitexact, meaning that the output will not contain any additional information that is not present in the input file.
+        /// </summary>
         internal bool? Bitexact { get; set; } = false;
 
         #endregion Parameters
@@ -126,8 +135,22 @@ namespace Dataweave
             }
         }
 
+        /// <summary>
+        /// Gets the metadata associated with the current instance.
+        /// </summary>
         public MetaData Metadata { get; private set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FFprobe"/> class with the specified file name and optional parameters.
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="ffprobePath"></param>
+        /// <param name="analyzeduration"></param>
+        /// <param name="probesize"></param>
+        /// <param name="unit"></param>
+        /// <param name="sexagesimal"></param>
+        /// <param name="bitexact"></param>
+        /// <exception cref="FileNotFoundException"></exception>
         public FFprobe(string fileName, string ffprobePath = "ffprobe", int? analyzeduration = null, int? probesize = null, bool? unit = false, bool? sexagesimal = false, bool? bitexact = false)
         {
             if (!File.Exists(fileName))

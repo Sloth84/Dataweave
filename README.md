@@ -25,28 +25,9 @@ You can install the `Dataweave` library using the NuGet Package Manager
 using Dataweave;
 string filePath = "sample.mp4"; 
 var ffprobe = new FFprobe(filePath);
-// Access parsed metadata var metadata = ffprobe.Metadata;
-// Example: List all video streams foreach (var video in metadata.Streams.Video) { Console.WriteLine($"Codec: {video.CodecName}, Resolution: {video.Width}x{video.Height}"); }
-```
-### Customizing Probe Parameters
-```
-using Dataweave;
-string filePath = "sample.mp4"; 
-var ffprobe = new FFprobe( fileName: filePath, analyzeduration: 10000000);
 var metadata = ffprobe.Metadata;
-// Example: List all audio streams foreach (var audio in metadata.Streams.Audio) { Console.WriteLine($"Codec: {audio.CodecName}, Channels: {audio.Channels}"); }
-```
-
-### Handling Errors
-```
-using Dataweave;
-try 
+foreach (var video in metadata.Streams.Video) 
 { 
-	var ffprobe = new FFprobe("nonexistent.mp4"); 
-	var metadata = ffprobe.Metadata; } 
-	catch (FileNotFoundException ex) 
-	{ 
-		Console.WriteLine($"File error: {ex.Message}"); 
-	}
+	Console.WriteLine($"Codec: {video.CodecName}, Resolution: {video.Width}x{video.Height}"); 
 }
 ```
